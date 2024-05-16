@@ -1,0 +1,65 @@
+# Python specific
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.swp
+*.swo
+*.DS_Store
+
+# Virtual environment
+myenv/
+myvenv/
+
+
+# Django specific
+*.log
+*.pot
+*.pyc
+*.mo
+*.compiled
+*.db
+
+# Local settings
+local_settings.py
+
+# Media
+/media
+
+# Static files
+/static
+
+# Coverage reports
+htmlcov/
+.coverage
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Sphinx documentation
+docs/_build/
+
+# Environments
+.env
+.env.*
+
+# MyPy
+.mypy_cache/
+
+# Pytest
+.pytest_cache/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db

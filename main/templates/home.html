@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> EXTRACTION</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<style>
+  .container {
+    height: 100px;
+    position: relative;
+    border: 2px white;
+  }
+  
+  </style>
+  
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>EL</b> Extraction de donnéess</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+    </div>
+  </div>
+</div>
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <a align="center" href="https://imgbb.com/"><img src="https://i.ibb.co/SBSwzgZ/eye-mapping.png" alt="eye-mapping" border="0"></a>
+  <div class="w3-display-middle w3-margin-top w3-center">
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+    <div class="container">
+      <h1 align='left'>Choisissez votre image</h1>
+    </div>
+    {% if upload_success %}
+    <p style="color: green">Photo uploaded successfully!</p>
+    {% endif %}
+    <form
+      method="post"
+      enctype="multipart/form-data"
+      action="{% url 'upload_image' %}"
+    >
+      {% csrf_token %} {{ form.as_p }}
+      <div class="container">
+      <button type="submit">Upload</button>
+    </div>
+    </form>
+  
+  </body>
+</html>

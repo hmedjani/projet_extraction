@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Resultat</title>
+  </head>
+  <body>
+    <div style="display: flex; gap: 20px">
+      <div style="text-align: center">
+        <h2>original image</h2>
+        <img
+          src="{{ original_image_path }}"
+          alt="Uploaded Image"
+          style="max-width: 500px"
+        />
+      </div>
+      <div style="text-align: center">
+        <h2>closest match</h2>
+        <img
+          src="{{ best_match_image_path }}"
+          alt="Uploaded Image"
+          style="max-width: 500px"
+        />
+      </div>
+    </div>
+    <h1>Minimal distance : {{ best_distance }}</h1>
+    <h1>Id Closest match: {{best_image_id}} </h1>
+    <h1>Matched Image</h1>
+    <img
+      src="data:image/png;base64,{{ processed_image }}"
+      align="center"
+      alt="Matched Image"
+      style='max-width: 1000px'
+    />
+    <br /><br />
+  </body>
+</html>
