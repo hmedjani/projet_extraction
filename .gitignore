@@ -23,8 +23,6 @@ myvenv/
 # Local settings
 local_settings.py
 
-# Media
-/media
 
 # Static files
 /static
